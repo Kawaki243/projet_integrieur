@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsxk85kyf1evp"]
+
+[ext_resource type="Script" path="res://SQLController.gd" id="1_2phtm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2phtm")
+
+[node name="CreatePlayer" type="Button" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 34.0
+offset_right = 224.0
+offset_bottom = 123.0
+text = "Create Player
+"
+
+[node name="CreateDeck" type="Button" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 151.0
+offset_right = 226.0
+offset_bottom = 240.0
+text = "Create Etablissement
+"
+
+[node name="CreateMonument" type="Button" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 275.0
+offset_right = 226.0
+offset_bottom = 364.0
+text = "Create Monument
+"
+
+[node name="CreateBank" type="Button" parent="."]
+layout_mode = 0
+offset_left = 893.0
+offset_top = 41.0
+offset_right = 1069.0
+offset_bottom = 130.0
+text = "Create Bank
+"
+
+[node name="Divide" type="Button" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 159.0
+offset_right = 638.0
+offset_bottom = 227.0
+text = "Divide cards"
+
+[node name="Hands" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.035
+offset_left = 441.0
+offset_top = 361.0
+offset_right = 605.68
+offset_bottom = 401.32
+text = "Show hand of each player"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShowHands" type="Button" parent="."]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 268.0
+offset_right = 640.0
+offset_bottom = 345.0
+text = "Show Players' hands"
+
+[connection signal="button_down" from="CreatePlayer" to="." method="_on_create_player_button_down"]
+[connection signal="button_down" from="CreateDeck" to="." method="_on_create_deck_button_down"]
+[connection signal="button_down" from="CreateMonument" to="." method="_on_create_monument_button_down"]
+[connection signal="button_down" from="CreateBank" to="." method="_on_create_bank_button_down"]
+[connection signal="button_down" from="Divide" to="." method="_on_divide_button_down"]
+[connection signal="button_down" from="ShowHands" to="." method="_on_show_hands_button_down"]
